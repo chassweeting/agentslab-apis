@@ -1,10 +1,9 @@
 # Workshop lab APIs 
 
-FastAPI service providing simplified APIs for a fictional restaurant, which will be 
-used by a workshop/lab on LLM Agents.
+FastAPI service providing simplified APIs for a fictional restaurant, to be 
+used in a workshop/lab on LLM Agents.
 
-NB: this is a contrived example, kept intentionally simple so that the focus of the 
-workshop is on the actual LLM Agents. 
+NB: this contrived example is intentionally kept simple to keep the focus on LLM Agents. 
 
 <br>
 
