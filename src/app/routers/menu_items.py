@@ -9,16 +9,6 @@ from .schemas import MenuItemCreate, MenuItemInDB, MenuItemUpdate
 
 router = APIRouter()
 
-# @router.get(
-#     "/cache",
-#     status_code=200,
-#     name="Agent cache",
-#     description="Returns full langchain agent cache.",
-# )
-
-
-router = APIRouter()
-
 
 @router.get("/menu-items", response_model=List[MenuItemInDB], tags=["Menu Items"])
 def get_menu_items(
