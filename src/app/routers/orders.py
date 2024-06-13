@@ -23,6 +23,15 @@ def get_order_by_id(order_id: int, db: Session = Depends(get_db)):
     return order
 
 
+@router.get("/orders_by_user/{user_id}", response_model=List[OrderInDB])
+def get_orders_by_user_id(user_id: int, db: Session = Depends(get_db)):
+    """Retrieve orders for a specific user by customer ID."""
+    orders = db.query(Order).filter(Order.customer_id == user_id).all()
+    if not orders:
+        raise HTTPException(status_code=404, detail="No orders found for this user")
+    return orders
+
+
 @router.post("/orders", response_model=OrderInDB)
 def create_order(order_create: OrderCreate, db: Session = Depends(get_db)):
     db_customer = db.query(Customer).filter(Customer.id == order_create.customer_id).first()

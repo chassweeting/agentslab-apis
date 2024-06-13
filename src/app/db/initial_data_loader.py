@@ -211,7 +211,9 @@ def create_orders(db: Session):
             {"status": OrderStatus.PENDING, "time_offset": timedelta(hours=-1), "customer": selected_customers[4], "items": selected_menu_items},
         ]
 
-        for order_info in orders_info:
+
+
+        for idx, order_info in enumerate(orders_info):
             order_date = now + order_info["time_offset"]
 
             # Create a new order
@@ -221,6 +223,10 @@ def create_orders(db: Session):
                 total_amount=0.0,  # will be updated after adding order items
                 status=order_info["status"].value
             )
+            # Set the first order's ID to a value which will not be confused with customer ID
+            if idx == 0:
+                order.id = 8800
+
             db.add(order)
             db.commit()  # Commit to generate order ID
 

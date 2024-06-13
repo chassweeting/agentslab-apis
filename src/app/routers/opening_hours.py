@@ -10,7 +10,7 @@ from .schemas import OpeningHoursSchema
 router = APIRouter()
 
 
-@router.get("/opening_hours", response_model=List[OpeningHoursSchema])
+@router.get("/opening-hours", response_model=List[OpeningHoursSchema])
 def get_opening_hours_by_day(day: Optional[str] = None, special: Optional[bool] = False, db: Session = Depends(get_db)):
     """Get opening hours by day."""
     query = db.query(OpeningHours)
