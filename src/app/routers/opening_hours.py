@@ -11,11 +11,11 @@ router = APIRouter()
 
 
 @router.get("/opening_hours", response_model=List[OpeningHoursSchema])
-def get_opening_hours_by_day(day: str, special: Optional[bool] = False, db: Session = Depends(get_db)):
-    """Get opening hours by day"""
-    query = db.query(OpeningHours).filter(OpeningHours.day == day)
+def get_opening_hours_by_day(day: Optional[str] = None, special: Optional[bool] = False, db: Session = Depends(get_db)):
+    """Get opening hours by day."""
+    query = db.query(OpeningHours)
     if day:
-        query = query.filter(OpeningHours.day == day)
+        query = query.filter(OpeningHours.day == day.title())
     if special:
         query = query.filter(OpeningHours.is_special == True)
     opening_hours = query.all()
