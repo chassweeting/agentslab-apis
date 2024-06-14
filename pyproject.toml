@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "restaurant-api"
 version = "0.1.0"
-description = "Dummy API for workshop labs. Deliberately kept stupid simple with no depenencies."
+description = "Dummy API for workshop labs. Deliberately kept simple with no depenencies."
 authors = ["@chassweeting"]
 readme = "README.md"
 package-mode = false
