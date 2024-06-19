@@ -10,20 +10,28 @@ NB: this contrived example is intentionally kept simple to keep the focus on LLM
 ## Pre-requisites 
 
 If running this lab locally, you will require: 
-- Python version 3.10 or later installed. 
-- Poetry 
+- Python version 3.10, 3.11 or 3.12 
+- [Poetry](https://python-poetry.org/docs/) version 1.8+
 
 <br>
 
-## Running locally
+## Installation
 
-Install dependencies: 
+Use Poetry to install the dependencies. This will also create a virtualenv in the `.venv` directory. 
 
 ```bash
 poetry install
 ```
 
-Run: 
+If you encounter issues when trying to run this command  (eg. "The Poetry configuration is invalid"), try upgrading 
+Poetry with `poetry self update`.
+
+
+<br> 
+
+## Running
+
+No configuration is required.  Simply run the API locally with the following command from the repo root: 
 
 ```bash 
 make serve 

@@ -15,7 +15,7 @@
         {
             "name": "Lasagna",
             "price": 13.99,
-            "ingredients": ["lasagna noodles", "ground beef", "tomato sauce", "mozzarella cheese", "parmesan cheese", "ricotta cheese"],
+            "ingredients": ["lasagna noodles", "eggplant", "tofu", "tomato sauce", "mozzarella cheese", "parmesan cheese", "ricotta cheese"],
             "label": "Vegetarian"
         },
         {
