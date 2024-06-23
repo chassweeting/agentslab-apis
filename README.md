@@ -57,3 +57,6 @@ make run
 ```
 
 (NB: make sure that no other service is running on port 8000 before running)
+
+Afterwards, you can use `make docker-clean` to kill/remove the container. 
+
