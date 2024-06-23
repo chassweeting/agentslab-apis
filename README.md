@@ -1,4 +1,4 @@
-# Workshop lab APIs 
+# Restaurant API (for lab) 
 
 FastAPI service providing simplified APIs for a fictional restaurant, to be 
 used in a workshop/lab on LLM Agents.
