@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 export PYTHONPATH := .
 
-DOCKER_IMAGE_NAME=agentslab-api
+DOCKER_IMAGE_NAME=restaurant-api
 DOCKER_TAG=latest
 PYTHON_VERSION=3.12
 
